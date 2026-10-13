@@ -119,3 +119,24 @@ Para cargar la base de datos con las tablas requeridas y los 10 registros de pru
    \`\`\`bash
    ./restaurar_bd.sh
    \`\`\`
+
+---
+
+### Alternativa sin Docker (XAMPP / MySQL Workbench / Consola local)
+
+El repositorio incluye el volcado completo en `sql/database_init.sql` con el esquema y datos de prueba.
+
+* **Con phpMyAdmin (XAMPP):**
+  1. Ingresa a `http://localhost/phpmyadmin`.
+  2. Haz clic en la pestaña superior **Importar**.
+  3. Carga el archivo `sql/database_init.sql` y pulsa **Continuar**.
+
+* **Con MySQL Workbench:**
+  1. Menú **Server** > **Data Import**.
+  2. Selecciona **Import from Self-Contained File** y busca `sql/database_init.sql`.
+  3. Haz clic en **Start Import**.
+
+* **Desde la terminal local:**
+  \`\`\`bash
+  mysql -u root -p < sql/database_init.sql
+  \`\`\`
