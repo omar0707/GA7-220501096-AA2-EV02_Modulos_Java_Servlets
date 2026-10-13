@@ -105,3 +105,17 @@ GA7-220501096-AA2-EV02_Modulos_Java_Servlets/
 2. **Login OTP:** Vaya a *Iniciar Sesion* -> pestaña *Codigo OTP*, ingrese `admin@canstyling.com` o el correo de un cliente, solicite el codigo de 6 digitos y valide el acceso.
 3. **Agendar Cita:** En la seccion *Citas*, haga clic en *Agendar Nueva Cita*, seleccione cliente, mascota (se carga dinamicamente via AJAX/Fetch) y servicio.
 4. **Ver Album:** Al crearse la cita, copie el enlace con el Token UUID generado y pruebelo en una pestaña de incognito para verificar que se muestra la comparativa visual de "Antes y Despues" de forma segura.
+
+## Inicialización de la Base de Datos
+
+Para cargar la base de datos con las tablas requeridas y los 10 registros de prueba (clientes, mascotas y servicios):
+
+1. Asegúrate de tener el contenedor de MySQL en ejecución:
+   \`\`\`bash
+   docker start mysql-db
+   \`\`\`
+
+2. Ejecuta el script de restauración:
+   \`\`\`bash
+   ./restaurar_bd.sh
+   \`\`\`
