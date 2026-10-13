@@ -23,3 +23,4 @@ target/
 .env.*
 target/
 *.log
+apache-tomcat-10.1.20.tar.gz
